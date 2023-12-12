@@ -1,0 +1,179 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600;700;900&display=swap');
+
+*{
+    margin: 0;
+} 
+
+html{
+    font-family: Urbanist;
+     
+}
+
+body{
+    background-color: #4158e0; 
+    width: 100%;
+    height: 1980px; 
+}
+
+
+/******Estilo del encabezado*******/
+header{
+    background-color: #4158e0;
+    width: 100%; /**Ancho del encabezado*/
+    height: 4%; /**Alto del encabezado*/
+    position: sticky;
+    top: 2px;
+    
+}
+
+/******Estilo para el menu de navegación*******/
+header nav{
+    background-color: #4158e0;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    /*justify-content: center;*/
+    
+}
+
+nav .navMenu{
+    background-color: #4158e0;
+    width: 100%;
+    height: 50%;
+    list-style:none; /*quitar estilo de lista*/
+    display: flex; /*acomodar de manera lineal*/
+    justify-content: center;
+    align-items: center;
+}
+
+nav .navMenu a{
+    /*  QUITAR EL SUBRAYADO*/
+    text-decoration: none;
+    /*DAR ESPACIADO ENTRE CADA PALABRA DEL MENÚ*/
+    margin-right: 50px;
+    color: #fdfade;
+    
+}
+
+nav .navMenu .logoPag{
+    background-color: #4158e0;
+    width: 30%;
+    height: 30px;
+    margin-right: 10%;
+    display: flex;
+    position: sticky;
+    top: 2px;
+}
+
+.logoPag img{
+   
+    height: 100%;
+}
+
+/*Contenido de la página */
+main{
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%; /***************************/
+   
+}
+
+
+main img{
+    width: 20%;
+}
+
+/*Contenido página principal bienvenida*/
+
+h1{
+    font-size: 4rem;
+    
+}
+
+
+
+main .principal{
+    background-color: #4158e0;
+    width: 100%;
+    height: 30%; /*****************************/
+    margin: 0% 2% 5% 0%;
+    display: flex;
+    color: #eaeaea;
+}
+
+.principal .descripcionMuestra{
+    background-color: #4158e0;
+    width: 50%;
+    height: 75%;
+    margin: 2% 5% 5% 8%;
+}
+
+.principal .imagenMuestra{
+    background-color: #4158e0;
+    width: 60%;
+    height: 80%;
+    margin: 5%;
+    position: relative;
+    top: 1%;
+}
+
+
+.principal .imagenMuestra img{
+    width: 80%;
+    height: auto;
+}
+
+
+
+main .inicioSugerencia{
+    width: 90%;
+    height: 20%;
+    margin: 3%;
+    border-radius:20px;
+    border-color: #4158e0;
+    border-width: 3px;
+    border-style: solid;
+    display: flex;
+
+}
+
+main .inicioSugerencia .imagenMuestra{
+    width: 50%;
+    height: 74%;
+    margin: 4%; 
+    
+}
+
+.imagenMuestra img{
+    height: 100%;
+    width: 100%;
+}
+
+/*
+.imagenMuestra img.cover{
+    object-fit: cover;
+}*/
+
+
+
+.inicioSugerencia .descripcionMuestra{
+    width: 40%;
+    text-align: end;
+    margin: 4%;
+    background-color: #eaeaea;
+
+
+}
+
+/*Pie de página*/
+footer{
+    background-color: #4158e0;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    color: #eaeaea;
+
+}
+
