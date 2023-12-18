@@ -1,106 +1,139 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@200;400;600;700;900&display=swap');
 
 *{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 } 
 
 html{
     font-family: Urbanist;
+    background-color: #4158e0;
      
 }
 
 body{
-    background-color: #4158e0; 
+    
     width: 100%;
-    height: 1980px; 
+    height: auto;
+    background-color: #eaeaea; 
 }
 
 
 /******Estilo del encabezado*******/
+
 header{
     background-color: #4158e0;
-    width: 100%; /**Ancho del encabezado*/
-    height: 4%; /**Alto del encabezado*/
-    position: sticky;
-    top: 2px;
-    
 }
+
+header a{
+    
+    color: #eaeaea;
+    font-family: urbanist;
+    font-size: 1.1rem;
+}
+
+
 
 /******Estilo para el menu de navegación*******/
 header nav{
-    background-color: #4158e0;
-    width: 100%;
-    height: 80%;
-    display: flex;
-    /*justify-content: center;*/
     
-}
-
-nav .navMenu{
-    background-color: #4158e0;
     width: 100%;
-    height: 50%;
-    list-style:none; /*quitar estilo de lista*/
-    display: flex; /*acomodar de manera lineal*/
-    justify-content: center;
-    align-items: center;
+    height: auto;
+  
 }
 
-nav .navMenu a{
-    /*  QUITAR EL SUBRAYADO*/
-    text-decoration: none;
-    /*DAR ESPACIADO ENTRE CADA PALABRA DEL MENÚ*/
-    margin-right: 50px;
-    color: #fdfade;
-    
-}
 
-nav .navMenu .logoPag{
-    background-color: #4158e0;
-    width: 30%;
-    height: 30px;
-    margin-right: 10%;
-    display: flex;
-    position: sticky;
-    top: 2px;
-}
-
-.logoPag img{
-   
-    height: 100%;
-}
 
 /*Contenido de la página */
 main{
-    background-color: #eaeaea;
+    
     width: 100%;
-    height: 100%; /***************************/
-   
+    height:auto; /***************************/
+    font-family: Urbanist;
 }
 
 
-main img{
-    width: 20%;
+
+
+/********************GRID****************************/
+.contenedor-grid{
+    display: grid;
+    /*DEFINIR LAS ÁREAS**/
+    grid-template-areas: 
+    ". . . ."
+    ". titulo . ."
+    ". textoBoton imagen ."
+    ". . imagen .";
+
+    /*Ancho de columna*/
+    grid-template-columns: 5% 45% 45% 5%;
+
+    /*Alto de filas*/
+    grid-template-rows: 30px 100px 100px 300px; 
+
+}
+
+.contenedor-grid img{
+ height: 100%;
+ width: auto;
+ 
+ 
+}
+
+.grid-titulo{
+    grid-area: titulo;
+    background-color: aquamarine;
+}
+
+.grid-texto{
+    grid-area: textoBoton;
+    background-color: darkmagenta;
+}
+
+.grid-img{
+    grid-area: imagen;
+    justify-self: center;
+    background-color: hotpink;
+    
+    
 }
 
 /*Contenido página principal bienvenida*/
 
 h1{
-    font-size: 4rem;
-    
+    font-size: 6vw;  
+}
+
+h2{
+    font-size: 3.6vw;
+}
+
+h3{
+    font-size: 2.8vw;
+}
+
+
+h4{
+    font-size: 2.5vw;
+}
+
+p{
+    font-size: 1vw;
+
 }
 
 
 
 main .principal{
     background-color: #4158e0;
-    width: 100%;
-    height: 30%; /*****************************/
-    margin: 0% 2% 5% 0%;
+    width: auto;
+    height: auto; /*****************************/
     display: flex;
+    flex-direction: row;
+    align-items: center;
     color: #eaeaea;
+    
 }
 
 .principal .descripcionMuestra{
@@ -126,29 +159,99 @@ main .principal{
 }
 
 
+.contenedorMenu-grid{
+    display: grid;
+    grid-template-areas: "aplicaciones referentes herramientas";
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: auto;
+}
 
-main .inicioSugerencia{
+.contenedorMenu-grid .inicioSugerencia{
     width: 90%;
-    height: 20%;
-    margin: 3%;
-    border-radius:20px;
+    height: 10%;
+    margin: 5%;
+    border-radius:10px;
     border-color: #4158e0;
-    border-width: 3px;
+    border-width: 2%;
     border-style: solid;
-    display: flex;
+    display: flex; /*  VERIFICAR FLEBOX*/
+    flex-direction: row;
+    align-items: center;
 
 }
 
-main .inicioSugerencia .imagenMuestra{
+.inicioSugerencia2{ /**SI FUNCIONA***/
+    grid-area: aplicaciones;
+    width: 90%;
+    height: auto;
+    margin: 4%;
+    padding: 5%; 
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    display: flex; /*  VERIFICAR FLEBOX*/
+    flex-direction: column;
+    align-items: center;
+    
+}
+.inicioSugerencia2 img{
+    height: auto;
+    width:100%;
+}
+
+
+.inicioSugerencia3{ /**SI FUNCIONA***/
+    grid-area: referentes;
+    width: 90%;
+    height: auto;
+    margin: 4%;
+    padding: 5%; 
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    display: flex; /*  VERIFICAR FLEBOX*/
+    flex-direction: column;
+    align-items: center;
+    
+}
+.inicioSugerencia3 img{
+    height: auto;
+    width:100%;
+}
+
+.inicioSugerencia4{ /**SI FUNCIONA***/
+    grid-area: herramientas;
+    width: 90%;
+    height: auto;
+    margin: 4%;
+    padding: 5%; 
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    display: flex; /*  VERIFICAR FLEBOX*/
+    flex-direction: column;
+    align-items: center;
+    
+}
+.inicioSugerencia4 img{
+    height: auto;
+    width:100%;
+}
+
+.contenedorMenu-grid .inicioSugerencia .imagenMuestra{
     width: 50%;
     height: 74%;
     margin: 4%; 
+
     
 }
 
 .imagenMuestra img{
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width:100%;
 }
 
 /*
@@ -157,23 +260,242 @@ main .inicioSugerencia .imagenMuestra{
 }*/
 
 
-
 .inicioSugerencia .descripcionMuestra{
     width: 40%;
     text-align: end;
     margin: 4%;
-    background-color: #eaeaea;
+
+}
+
+.descripcionMuestra p{
+    font-size: 0.9vw;
+}
+
+.descripcionMuestra h4{
+    color: #ed6135;
+}
+
+/**Página aplicaciones*/
 
 
+.contenedorAplicaciones{
+    display:grid;
+    grid-template-areas:
+    "titulo titulo texto texto texto"
+    "titulo titulo texto texto texto"
+    "titulo titulo imagen imagen imagen"
+    "titulo titulo imagen imagen imagen"
+    "titulo titulo imagen imagen imagen";
+    grid-template-columns: repeat(5, 18%);
+    grid-template-rows: repeat(5, auto);
+    padding: 2%;
+    grid-gap: 2%;
+}
+    
+
+.contenedorAplicaciones img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius:10px;
+    border-width: 2%;
+   
+   
+}
+
+
+.tituloAplicacion{
+    grid-area: titulo;
+    border-radius:10px;
+    
+    border-width: 2%;
+   
+    overflow: hidden;
+    
+}
+
+.textoAplicacion{
+    grid-area: texto;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    padding: 2%;
+    overflow: hidden;
+
+}
+
+.ejemploAplicacion{
+    grid-area: imagen;
+    border-radius:10px;
+   
+    border-width: 2%;
+    
+    overflow: hidden;
+
+}
+
+
+/*Página referentes*/
+
+.contenedorReferentes{
+    display: grid;
+    grid-template-areas: 
+    "bio bio bio imagen imagen"
+    "bio bio bio imagen imagen"
+    "trabajo trabajo texto texto texto"
+    "trabajo trabajo texto texto texto";
+    grid-template-columns: repeat(5, 18%);
+    grid-template-rows: repeat(4, 30);
+    padding: 2%;
+    grid-gap: 2%;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}
+
+.contenedorReferentes img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius:10px;
+    border-width: 2%;
+   
+}
+.imagenReferente{
+    grid-area: imagen;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+}
+
+.bioReferente{
+    grid-area: bio;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    padding: 2%;
+
+}
+
+.trabajoReferente{
+    grid-area: texto;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    padding: 2%;
+
+}
+
+.trabajoImagenes{
+    grid-area: trabajo;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+}
+
+/**Página Herramientas*/
+.contenedorHerramientas{
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "imagen";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding: 2%;
+    grid-gap: 2%;
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+}
+
+.contenedorHerramientas img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius:10px;
+    border-width: 2%;
+}
+
+.tituloH{
+    grid-area: titulo;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    padding: 2%;
+    text-align: center;
+    
+}
+
+.tarjetasH {
+    grid-area: imagen;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+/*Página preguntas*/
+.contenedorPregunta{
+    display: grid;
+    grid-template-areas: "titulo formulario";
+    grid-template-columns: 40% 58%;
+    grid-template-rows: 100%;
+    margin: 2%;
+    grid-gap: 2%;
+    
+    
+    
+}
+
+.tituloPregunta{
+    grid-area: titulo;
+    border-radius:10px;
+    border-color: #4158e0;
+    border-width: 2%;
+    border-style: solid;
+    padding: 5%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formPreguntas{
+    grid-area: formulario;
+    font-family: urbanist;
+   
+    
 }
 
 /*Pie de página*/
 footer{
     background-color: #4158e0;
-    width: 100%;
-    height: 20%;
-    position: absolute;
+    width: auto;
+    height: 10%;
+    padding-top: 2%;
+    /*position: absolute;*/
+    font-size: 0.8vw;
+    line-height: 3vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #eaeaea;
+}
 
+footer a{
+    color:#eaeaea;
+    padding: 1%;
+    
+}
+
+footer img{
+   width:10%;
 }
 
